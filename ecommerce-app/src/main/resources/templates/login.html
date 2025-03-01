@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Phone E-Commerce</h1>
+        </div>
+        <nav>
+            <a th:href="@{/register}">Register</a>
+            <a th:href="@{/login}">Login</a>
+            <a th:href="@{/products}">Products</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="/login" method="POST" th:action="@{/login}">
+                <div class="input-field">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Phone E-Commerce Store</p>
+    </footer>
+</body>
+</html>
