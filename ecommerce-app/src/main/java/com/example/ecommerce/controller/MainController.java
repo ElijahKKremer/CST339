@@ -13,8 +13,5 @@ public class MainController {
         return "index"; // Will render index.html in templates
     }
 
-   // @GetMapping("/register") 				IS THIS THE CONFLICT????????
-   // public String registerPage() {
-    //    return "register";
-   // }
+ 
 }

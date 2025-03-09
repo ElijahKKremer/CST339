@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Login Page</title>
-</head>
-<body>
-    <div class="container">
-        <h2>Login</h2>
-        <form action="/login" method="POST" th:action="@{/login}">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <div>
-                <button type="submit">Login</button>
-            </div>
-        </form>
-    </div>
-</body>
-</html>
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Product List</title>
+	    <link rel="stylesheet" th:href="@{/css/style.css}">
+	</head>>
+	<body>
+	    <h1>Product List</h1>
+	    <a href="/products/create">Create New Product</a>
+	    <ul>
+	        <th:block th:each="product : ${products}">
+	            <li>
+	                <h3 th:text="${product.name}"></h3>
+	                <p th:text="${product.description}"></p>
+	                <p th:text="'Price: ' + ${product.price}"></p>
+	            </li>
+	        </th:block>
+	    </ul>
+	</body>
+	</html>
