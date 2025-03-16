@@ -7,7 +7,20 @@
 	    <link rel="stylesheet" th:href="@{/css/style.css}">
 	</head>>
 	<body>
+		<header>
+		        <div class="logo">
+		            <h1>Phone E-Commerce</h1>
+		        </div>
+		        <nav>
+		            <a th:href="@{/register}">Register</a>
+		            <a th:href="@{/login}">Login</a>
+		            <a th:href="@{/products}">Products</a>
+					<a th:href="@{/about}">About</a>
+		        </nav>
+		    </header>
 	    <h1>Product List</h1>
+		<h4>		<a href="/">Home Page</a>
+</h4>
 	    <a href="/products/create">Create New Product</a>
 	    <ul>
 	        <th:block th:each="product : ${products}">
@@ -18,5 +31,8 @@
 	            </li>
 	        </th:block>
 	    </ul>
+		<footer>
+		       <p>&copy; 2025 Phone E-Commerce Store</p>
+		   </footer>
 	</body>
 	</html>

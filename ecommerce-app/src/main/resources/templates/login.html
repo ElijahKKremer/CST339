@@ -10,18 +10,20 @@
     <header>
         <div class="logo">
             <h1>Phone E-Commerce</h1>
+			<h4><a href="/">Home Page</a></h4>
         </div>
         <nav>
             <a th:href="@{/register}">Register</a>
             <a th:href="@{/login}">Login</a>
             <a th:href="@{/products}">Products</a>
+			<a th:href="@{/about}">About</a>
         </nav>
     </header>
 
     <main>
         <div class="login-container">
             <h2>Login</h2>
-            <form action="/login" method="POST" th:action="@{/login}">
+            <form method="POST" th:action="@{/login}">
                 <div class="input-field">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" required>

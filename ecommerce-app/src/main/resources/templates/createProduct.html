@@ -7,7 +7,19 @@
 	<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
+	<header>
+	        <div class="logo">
+	            <h1>Phone E-Commerce</h1>
+	        </div>
+	        <nav>
+	            <a th:href="@{/register}">Register</a>
+	            <a th:href="@{/login}">Login</a>
+	            <a th:href="@{/products}">Products</a>
+				<a th:href="@{/about}">About</a>
+	        </nav>
+	    </header>
     <h1>Create New Product</h1>
+	<h4><a href="/">Home Page</a></h4>
     <form action="/products/create" method="post">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required>
@@ -19,7 +31,16 @@
         <input type="number" id="price" name="price" required>
         
         <button type="submit">Create Product</button>
-    </form>
-	<!-- <a href="/products">Back to Products List</a> -->
+		<form th:action="@{/products/create}" th:object="${product}" method="post">
+		    <input type="hidden" name="_csrf" th:value="${_csrf.token}"/>  <!-- CSRF Token -->
+
+		    <!-- Form fields for the product -->
+		    
+
+		
+		</form>
+		<footer>
+		       <p>&copy; 2025 Phone E-Commerce Store</p>
+		   </footer>
 </body>
 </html>

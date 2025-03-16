@@ -43,7 +43,8 @@ public class ProductController {
     // Handle the form submission and add the new product to the in-memory list
     @PostMapping("/products/create")
     public String createProduct(@ModelAttribute Product product, Model model) {
-        // Add the new product to the in-memory list
+    	System.out.println("Creating product: " + product.getName());
+    	// Add the new product to the in-memory list
         productRepository.save(product); ///////////////////////////////////save vs productList.get
 
         // Redirect back to the products page to see the list

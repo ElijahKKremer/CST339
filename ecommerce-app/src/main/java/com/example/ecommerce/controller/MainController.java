@@ -12,6 +12,16 @@ public class MainController {
         model.addAttribute("title", "Phone E-Commerce");
         return "index"; // Will render index.html in templates
     }
+    
+    @GetMapping("/about")
+    public String aboutUs() {
+        return "about";  // This will render the about.html page
+    }
+    
+    @GetMapping("/error")
+    public String errorPage() {
+        return "error";  
+    }
 
  
 }

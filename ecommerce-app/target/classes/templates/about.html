@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Phone E-Commerce Store</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <!-- Header (Same as in home page) -->
+    <header>
+        <div class="logo">
+            <h1>Phone E-Commerce</h1>
+        </div>
+        <nav>
+            <a th:href="@{/register}">Register</a>
+            <a th:href="@{/login}">Login</a>
+            <a th:href="@{/products}">Products</a>
+            <a th:href="@{/about}">About</a> <!-- Active class for "About" page -->
+        </nav>
+    </header>
+
+    <!-- Main Content for About Us -->
+    <main>
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>Welcome to Phone E-Commerce! We are dedicated to providing you with the best phones at the best prices.</p>
+            <p>Our mission is to offer a seamless online shopping experience for customers worldwide. Whether you're looking for the latest models or budget-friendly options, we’ve got you covered.</p>
+            <p>Our team works hard to ensure high-quality products, fast delivery, and excellent customer service.</p>
+        </div>
+    </main>
+
+    <!-- Footer (Same as in home page) -->
+    <footer>
+        <p>&copy; 2025 Phone E-Commerce Store</p>
+    </footer>
+</body>
+</html>
+
