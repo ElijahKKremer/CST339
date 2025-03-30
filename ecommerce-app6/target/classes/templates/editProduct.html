@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Product</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Phone E-Commerce</h1>
+        </div>
+        <nav>
+            <a th:href="@{/register}">Register</a>
+            <a th:href="@{/login}">Login</a>
+            <a th:href="@{/products}">Products</a>
+            <a th:href="@{/about}">About</a>
+        </nav>
+    </header>
+
+    <h1>Edit Product</h1>
+    <form th:action="@{/products/edit}" th:object="${product}" method="post">
+        <input type="hidden" th:field="*{id}"/> <!-- For the ID to be sent with the form -->
+
+        <label for="name">Product Name:</label>
+        <input type="text" th:field="*{name}" id="name" required/>
+        
+        <label for="description">Description:</label>
+        <textarea th:field="*{description}" id="description" required></textarea>
+
+        <label for="price">Price:</label>
+        <input type="number" th:field="*{price}" id="price" required step="0.01"/>
+
+        <button type="submit">Update Product</button>
+    </form>
+
+    <footer>
+        <p>&copy; 2025 Phone E-Commerce Store</p>
+    </footer>
+</body>
+</html>
